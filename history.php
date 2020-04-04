@@ -24,8 +24,6 @@ if (!isset($_SESSION['logged'])){
             <a class="nav-item nav-link" href="main.php">Strona główna</a>
             <a class="nav-item nav-link" href="archive.php">Archiwalne dane pogodowe</a>
             <a class="nav-item nav-link" href="rows.php">Wykresy</a>
-            <a class="nav-item nav-link" href="plants.php">Rośliny</a>
-            <a class="nav-item nav-link" href="todo.php">Lista zadań</a>
             <a class="nav-item nav-link active" href="history.php">Historia podlewania</a>
   
         </nav>
