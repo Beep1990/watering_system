@@ -3,9 +3,9 @@
     function database(){
         
         $host = "localhost";
-        $db_user = "beep21";
-        $db_password ="password";
-        $db_name ="dht11";
+        $db_user = "root";
+        $db_password ="M@rco12345";
+        $db_name ="watering_system";
 
         try{
             $conn = new mysqli ($host, $db_user, $db_password, $db_name);
