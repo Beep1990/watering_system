@@ -34,6 +34,10 @@ if (!isset($_SESSION['logged'])){
             {
                 exec('sudo python /home/pi/wateringON50.py');
             }
+            if (isset($_POST['status']))
+            {
+                exec('gpio -g read 18');
+            }
         ?>
         
         <title>Podlewaczka</title>
@@ -130,8 +134,17 @@ if (!isset($_SESSION['logged'])){
         <br />
 
         <div class="container mt-2 m b-4 p-2 shadow bg-white" style="margin: auto; text-align: center;">
-        
-        <h1>Aktualny status:</h1>
+    <?php
+        $watering_status = exec('gpio -g read 4'); 
+        if ($watering_status = 0){
+
+        }
+        else{
+
+        }
+    ?>
+        <h1>Aktualny status:<?php echo $watering_status?></h1>
+
         </div>
 
               

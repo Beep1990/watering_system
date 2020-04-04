@@ -26,8 +26,6 @@ if (isset($_POST['save_task'])){
     header("location: todo.php");
 }
 
-
-
 if (isset($_POST['wON'])){
 
         $owner = $_SESSION['login'];
