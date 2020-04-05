@@ -16,23 +16,23 @@ if (!isset($_SESSION['logged'])){
          <?php 
             if (isset($_POST['wON']))
             {
-            exec('sudo python /home/pi/wateringON.py');
+                exec('sudo python /var/www/html/rpi_scripts/wateringON.py');
             }
             if (isset($_POST['wOFF']))
             {
-            exec('sudo python /home/pi/wateringOFF.py');
+                exec('sudo python /var/www/html/rpi_scripts/wateringOFF.py');
             }
             if (isset($_POST['wON15']))
             {
-                exec('sudo python /home/pi/wateringON15.py');
+                exec('sudo python /var/www/html/rpi_scripts/wateringON15.py');
             }
             if (isset($_POST['wON30']))
             {
-                exec('sudo python /home/pi/wateringON30.py');
+                exec('sudo python /var/www/html/rpi_scripts/wateringON30.py');
             }
             if (isset($_POST['wON50']))
             {
-                exec('sudo python /home/pi/wateringON50.py');
+                exec('sudo python /var/www/html/rpi_scripts/wateringON50.py');
             }
             if (isset($_POST['status']))
             {
@@ -122,11 +122,11 @@ if (!isset($_SESSION['logged'])){
         <div class="container mt-2 m b-4 p-2 shadow bg-white" method="POST" style="margin: auto; text-align: center;">
         <form method="POST">
         <h1>Sterowanie podlewaniem:</h1>
-        <button type="submit" name="wON"  class="btn btn-primary">Włącz</button>
-        <button type="submit" name="wON15"  class="btn btn-primary">Włącz podlewanie na 15 minut</button>
-        <button type="submit" name="wON30"  class="btn btn-primary">Włącz podlewanie na 30 minut</button>
-        <button type="submit" name="wON50"  class="btn btn-primary">Włącz podlewanie na 50 minut</button>
-        <button type="submit" name="wOFF" class="btn btn-danger">Wyłącz</button>
+        <button  name="wON"    class="btn btn-primary">Włącz</button>
+        <button  name="wON15"  class="btn btn-primary">Włącz podlewanie na 15 minut</button>
+        <button  name="wON30"  class="btn btn-primary">Włącz podlewanie na 30 minut</button>
+        <button  name="wON50"  class="btn btn-primary">Włącz podlewanie na 50 minut</button>
+        <button  name="wOFF"   class="btn btn-danger">Wyłącz</button>
         </form>
         </div>
 
@@ -143,7 +143,8 @@ if (!isset($_SESSION['logged'])){
 
         }
     ?>
-        <h1>Aktualny status:<?php echo $watering_status?></h1>
+        <h1>Aktualny status: <?php echo $watering_status?></h1>
+        <button type="submit" name="pinstatus"  class="btn btn-primary">Odśwież status</button>
 
         </div>
 
