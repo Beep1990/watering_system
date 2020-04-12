@@ -10,9 +10,9 @@ def db_add(temp, hum):
 
     mydb = mysql.connector.connect(
     host="localhost",
-    user="beep21",
-    passwd="password",
-    database="dht11"
+    user="root",
+    passwd="M@rco12345",
+    database="watering_system"
 
     )
     mycursor = mydb.cursor()
@@ -25,5 +25,5 @@ def db_add(temp, hum):
 while True:
     hum, temp = Adafruit_DHT.read_retry(11, 17)
     db_add (temp, hum)
-    time.sleep(600)
+    time.sleep(1800)
 

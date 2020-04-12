@@ -1,6 +1,8 @@
 import RPi.GPIO  as GPIO
 import time
 
+GPIO.setwarnings(False)
+
 channel = 4
 
 GPIO.setmode(GPIO.BCM)
