@@ -18,5 +18,9 @@ def koniec (pin):
 if __name__ == '__main__':
 	try:
 		podlewanie(channel)
+		time.sleep(3000)
+		koniec(channel)
+		time.sleep(2)
+		GPIO.cleanup()
 	except KeyboardInterrupt:
 		GPIO.cleanup()

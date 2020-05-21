@@ -17,7 +17,7 @@ def koniec (pin):
 if __name__ == '__main__':
 	try:
 		podlewanie(channel)
-		time.sleep(1800)
+		time.sleep(900)
 		koniec(channel)
 		time.sleep(2)
 		GPIO.cleanup()

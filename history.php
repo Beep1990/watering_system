@@ -36,9 +36,6 @@ if (!isset($_SESSION['logged'])){
                     Data Nawadniania
                 </th>
                 <th>
-                    Użytkownik
-                </th>
-                <th>
                     Długość nawadniania
                 </th>
             </tr>
@@ -52,7 +49,7 @@ if (!isset($_SESSION['logged'])){
                 if ($result->num_rows > 0) {
 
                     while ($row = $result->fetch_assoc()) {
-                        echo '<tr><td>'.$row["wdate"].' </td><td>'.$row["bywho"].'</td><td>'.$row["duration"].'</td></tr>'; 
+                        echo '<tr><td>'.$row["wdate"].' </td><td>'.$row["duration"].'</td></tr>'; 
                     }
                 }
 

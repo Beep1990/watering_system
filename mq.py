@@ -35,6 +35,7 @@ def messageDecoder(client, userdata, msg):
 	if message == "on":
 		gpio.output(4, gpio.HIGH)
 		db_add ()
+		print("Podlewanie włączone!")
 	elif message == "off":
 		gpio.output(4, gpio.LOW)
 		print("Podlewanie wyłączone!")
